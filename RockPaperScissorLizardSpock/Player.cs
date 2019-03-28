@@ -26,7 +26,7 @@ namespace RockPaperScissorLizardSpock
         //member methods
 
 
-        public string PlayerInput()
+        abstract string PlayerInput()
         {
             Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
             string Anwser = Console.ReadLine();
@@ -52,6 +52,12 @@ namespace RockPaperScissorLizardSpock
                     return PlayerInput();
 
             }
+        }
+
+        public int RandomNumber()
+        {
+            AiNumber = Random.Next();
+            return AiNumber
         }
     }
 }
